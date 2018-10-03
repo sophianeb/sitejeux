@@ -14,7 +14,6 @@
 
 				<div class="topbar-child2">
 					<span class="topbar-email">
-						test@test.fr jgilrhjgrilhulgzrhzrgu
 					</span>
 
 					<div class="topbar-language rs1-select2">
