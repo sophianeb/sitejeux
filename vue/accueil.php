@@ -1,7 +1,7 @@
 <section class="slide1">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(./template/images/master-slide-02.jpg);">
+				<div class="item-slick1 item1-slick1" style="background-image: url(./template/images/affichejeux.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Women Collection 2018
@@ -310,7 +310,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+								<img src="./template/images/item-02.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -343,7 +343,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+								<img src="./template/images/item-03.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -376,7 +376,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/item-05.jpg" alt="IMG-PRODUCT">
+								<img src="./template/images/item-05.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -409,7 +409,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/item-07.jpg" alt="IMG-PRODUCT">
+								<img src="./template/images/item-07.jpg" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -453,7 +453,7 @@
 			<div class="row">
 				<div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
 					<div class="hov-img-zoom pos-relative">
-						<img src="images/banner-08.jpg" alt="IMG-BANNER">
+						<img src="./template/images/banner-08.jpg" alt="IMG-BANNER">
 
 						<div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
 							<span class="m-text9 p-t-45 fs-20-sm">
@@ -473,7 +473,7 @@
 
 				<div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
 					<div class="bgwhite hov-img-zoom pos-relative p-b-20per-ssm">
-						<img src="images/shop-item-09.jpg" alt="IMG-BANNER">
+						<img src="./template/images/shop-item-09.jpg" alt="IMG-BANNER">
 
 						<div class="ab-t-l sizefull flex-col-c-b p-l-15 p-r-15 p-b-20">
 							<div class="t-center">
@@ -553,7 +553,7 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-01.jpg" alt="IMG-BLOG">
+							<img src="./template/images/blog-01.jpg" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -577,7 +577,7 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-02.jpg" alt="IMG-BLOG">
+							<img src="./template/images/blog-02.jpg" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -601,7 +601,7 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-03.jpg" alt="IMG-BLOG">
+							<img src="./template/images/blog-03.jpg" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -635,7 +635,7 @@
 		<div class="flex-w">
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-03.jpg" alt="IMG-INSTAGRAM">
+				<img src="./template/images/gallery-03.jpg" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -657,7 +657,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-07.jpg" alt="IMG-INSTAGRAM">
+				<img src="./template/images/gallery-07.jpg" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -679,7 +679,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-09.jpg" alt="IMG-INSTAGRAM">
+				<img src="./template/images/gallery-09.jpg" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -701,7 +701,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-13.jpg" alt="IMG-INSTAGRAM">
+				<img src="./template/images/gallery-13.jpg" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
@@ -723,7 +723,7 @@
 
 			<!-- Block4 -->
 			<div class="block4 wrap-pic-w">
-				<img src="images/gallery-15.jpg" alt="IMG-INSTAGRAM">
+				<img src="./template/images/gallery-15.jpg" alt="IMG-INSTAGRAM">
 
 				<a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
 					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">

@@ -28,7 +28,7 @@
 			<div class="wrap_header">
 				<!-- Logo -->
 				<a href="index.html" class="logo">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
+					<img src="./template/images/icons/logo.png" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu -->
@@ -45,14 +45,14 @@
 								<ul class="sub_menu">
 									<li><a href="index.html">Console</a>
 										<ul class="sub_menu">
-											<li><a href="index.html">PS4</a></li>
-											<li><a href="home-02.html">XBOX ONE</a></li>
-											<li><a href="home-03.html">Nintendo Swich</a></li>
+											<li><a href="index.html"><img src="./template/images/icons/ps4_logo.png" style="width:50px; height:40px;"> PS4</a></li>
+											<li><a href="home-02.html"><img src="./template/images/icons/xboxone_logo.png" style="width:50px; height:40px;"> XBOX ONE</a></li>
+											<li><a href="home-03.html"><img src="./template/images/icons/ninswitch_logo.png" style="width:50px; height:40px;"> Nintendo Swich</a></li>
 										</ul>
 							</li>
 									<li><a href="#">PC</a>
 										<ul class="sub_menu">
-												<li><a href="index.html">Origine</a></li>
+												<li>Origine</a></li>
 												<li><a href="home-02.html">Steam</a></li>
 												<li><a href="home-03.html">Ubisoft</a></li>
 										</ul>
@@ -83,13 +83,13 @@
 				<!-- Header Icon -->
 				<di v class="header-icons">
 					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<img src="./template/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="./template/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -97,7 +97,7 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
+										<img src="./template/images/item-cart-01.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -113,7 +113,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
+										<img src="./template/images/item-cart-02.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -129,7 +129,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
+										<img src="./template/images/item-cart-03.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -174,7 +174,7 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="index.html" class="logo-mobile">
-				<img src="images/icons/logo.png" alt="IMG-LOGO">
+				<img src="./template/images/icons/logo.png" alt="IMG-LOGO">
 			</a>
 
 			<!-- Button show menu -->
@@ -182,13 +182,13 @@
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
 					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<img src="./template/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="./template/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -196,7 +196,7 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
+										<img src="./template/images/item-cart-01.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -212,7 +212,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
+										<img src="./template/images/item-cart-02.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -228,7 +228,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
+										<img src="./template/images/item-cart-03.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
