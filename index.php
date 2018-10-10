@@ -1,3 +1,6 @@
+<?php require_once("./controleur/fonction.php");
+require_once("./controleur/connexionBDD.php") 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

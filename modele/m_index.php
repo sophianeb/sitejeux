@@ -16,6 +16,12 @@
                   case 'liste_articles':
                     include("./vue/liste_articles.php");
                   break;
+                  case 'contact':
+                    include("./vue/contact.php");
+                  break;
+                  case 'inscription':
+                    include("./vue/inscription.php");
+                  break;
 
                   default:
                     echo "erreur switch";

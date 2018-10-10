@@ -74,18 +74,50 @@
 							</li>
 
 							<li>
-								<a href="contact.html">Contact</a>
+								<a href="index.php?page=contact">Contact</a>
 							</li>
 						</ul>
 					</nav>
 				</div>
 
 				<!-- Header Icon -->
-				<di v class="header-icons">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="./template/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-					</a>
+				<div class="header-icons">
+					<div class="header-wrapicon2">
+						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						
 
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+						<form class="leave-comment">
+						Nom
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Nom">
+						</div>
+
+						Mot de passe
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="phone-number" placeholder="Mot de passe">
+						</div>
+						</form>
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Connexion
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									
+									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Inscription
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
@@ -173,10 +205,42 @@
 		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
-			<a href="index.html" class="logo-mobile">
-				<img src="./template/images/icons/logo.png" alt="IMG-LOGO">
-			</a>
+			<div class="header-wrapicon2">
+						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						
 
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+						<form class="leave-comment">
+						Nom
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Nom">
+						</div>
+
+						Mot de passe
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="phone-number" placeholder="Mot de passe">
+						</div>
+						</form>
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Connexion
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Inscription
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 			<!-- Button show menu -->
 			<div class="btn-show-menu">
 				<!-- Header Icon mobile -->
@@ -320,8 +384,25 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product.html">Shop</a>
-					</li>
+								<a href="index.php?page=liste_articles">Magazin</a>
+								<ul class="sub_menu">
+									<li><a href="index.html">Console</a>
+										<ul class="sub_menu">
+											<li><a href="index.html"><img src="./template/images/icons/ps4_logo.png" style="width:50px; height:40px;"> PS4</a></li>
+											<li><a href="home-02.html"><img src="./template/images/icons/xboxone_logo.png" style="width:50px; height:40px;"> XBOX ONE</a></li>
+											<li><a href="home-03.html"><img src="./template/images/icons/ninswitch_logo.png" style="width:50px; height:40px;"> Nintendo Swich</a></li>
+										</ul>
+							</li>
+									<li><a href="#">PC</a>
+										<ul class="sub_menu">
+												<li>Origine</a></li>
+												<li><a href="home-02.html">Steam</a></li>
+												<li><a href="home-03.html">Ubisoft</a></li>
+										</ul>
+									</li>
+									<li><a href="home-03.html">Accessoire</a></li>
+								</ul>
+							</li>
 
 					<li class="item-menu-mobile">
 						<a href="product.html">Sale</a>
