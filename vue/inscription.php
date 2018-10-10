@@ -4,14 +4,14 @@ $connexion = BDDConnexionPDO();
 
 
 
-if (isset($_POST['envoi'])) 
+if (isset($_POST['i_nom'])) 
 {
-  $monID = TestVarPost('monId');
+  
   $_data = [
-    'i_nom'=> TestVarPost('nom_user'),    
-    'i_prenom'=> TestVarPost('prenom_user'),
-    'i_email'=>TestVarPost('email_user'),
-    'i_password'=>TestVarPost('mdp_user')
+    'nom_user'=> 'i_nom',    
+    'prenom_user'=> 'i_prenom',
+    'email_user'=>'i_email',
+    'mdp_user'=>'i_password'
   ];
 
  
@@ -37,22 +37,23 @@ if (isset($_POST['envoi']))
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Nouveau client ?
 						</h4>
+						<?php var_dump($_data) ?>
 
 
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_nom" placeholder="nom">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_nom" id="i_nom" placeholder="nom">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_prenom" placeholder="prénom">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_prenom" id="i_prenom" placeholder="prénom">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_email" placeholder="adresse Email">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_email" id="i_email" placeholder="adresse Email">
 						</div>
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="i_password" placeholder="Nouveau mot de passe">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="i_password" id="i_password" placeholder="Nouveau mot de passe">
 						</div>
 						
 
@@ -60,7 +61,7 @@ if (isset($_POST['envoi']))
 
 						<div class="w-size25">
 							<!-- Button -->
-							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" type="submit" name='envoi'>
+							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" type="submit" name=envoi>
 								S'inscrire
 							</button>
 						</div>
