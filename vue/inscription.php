@@ -19,12 +19,16 @@ if (isset($_POST['i_nom']))
 	
 
 }
+<<<<<<< Updated upstream
 
     
 	
 
 
 
+=======
+var_dump($resultat);
+>>>>>>> Stashed changes
 
 ?>
 
