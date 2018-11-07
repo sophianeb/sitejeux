@@ -27,7 +27,7 @@
 
 			<div class="wrap_header">
 				<!-- Logo -->
-				<a href="index.html" class="logo">
+				<a href="index.php" class="logo">
 					<img src="./template/images/icons/logo.png" alt="IMG-LOGO">
 				</a>
 
@@ -45,7 +45,7 @@
 								<ul class="sub_menu">
 									<li><a href="index.html">Console</a>
 										<ul class="sub_menu">
-											<li><a href="index.html"><img src="./template/images/icons/ps4_logo.png" style="width:50px; height:40px;"> PS4</a></li>
+											<li><a href="index.php"><img src="./template/images/icons/ps4_logo.png" style="width:50px; height:40px;"> PS4</a></li>
 											<li><a href="home-02.html"><img src="./template/images/icons/xboxone_logo.png" style="width:50px; height:40px;"> XBOX ONE</a></li>
 											<li><a href="home-03.html"><img src="./template/images/icons/ninswitch_logo.png" style="width:50px; height:40px;"> Nintendo Swich</a></li>
 										</ul>

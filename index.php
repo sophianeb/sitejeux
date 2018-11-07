@@ -1,5 +1,5 @@
-<?php require_once("./controleur/fonction.php");
-require_once("./controleur/connexionBDD.php") 
+<?php require_once("./modele/fonction.php");
+require_once("./modele/connexionBDD.php") 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +47,7 @@ require_once("./controleur/connexionBDD.php")
 	</header>
 
 <div>	<!-- Slide1 -->
-	<?php include("modele/m_index.php"); ?>
+	<?php include("controleur/c_index.php"); ?>
 </div>
 	<!-- Footer -->
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">

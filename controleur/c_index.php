@@ -22,6 +22,10 @@
                   case 'inscription':
                     include("./vue/inscription.php");
                   break;
+                   case 'test':
+                    include("./vue/test1234.php");
+                  break;
+                  
 
                   default:
                     echo "erreur switch";

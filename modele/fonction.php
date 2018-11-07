@@ -1,3 +1,6 @@
+<?php
+error_reporting(E_ALL);
+?>
 <?php 
 function create($connexion, $table, $items=[]) {
 
@@ -18,7 +21,7 @@ function create($connexion, $table, $items=[]) {
 
   $resultat = $connexion->prepare($sql);
   $resultat->execute($data);
-
+  var_dump($sql);
   if ($resultat== true)
   {
     $resultat->closeCursor();
@@ -26,6 +29,7 @@ function create($connexion, $table, $items=[]) {
   }
   $resultat->closeCursor();
   return false;
+
   
 }
 function read($connexion, $table, $items,$ref=[1=>1])
@@ -96,8 +100,18 @@ $resultat->execute();
   return $resultat;
 
 }
-function TestVarPost($data) 
+function TestVarPost($data, $options = []) 
 {
+  if (isset($options['genre']) && $options['genre'] =='int')
+  {
+    return (int) $_POST[$data];
+
+  }
+
+  if (isset($options['type']) && $options['type'] == 'checkbox' && !isset($_POST[$data]))
+  {
+    return 'non';
+  }
   
   if (!isset($_POST[$data]))
   {
@@ -111,4 +125,21 @@ function TestVarPost($data)
   
   return $_POST[$data];
 }
+
+function message($status, $text, $options = []) {
+if (isset($options['no_close']))
+{
+  echo"<div class='alert alert-".$status."'>
+      
+      ".$text."
+    </div>";
+}
+else
+{
+  echo "
+    <div class='alert alert-".$status."'>
+      <button type='button' class='close' data-dismiss='alert'>&times;</button>
+      ".$text."
+    </div>";
+}}
 ?>

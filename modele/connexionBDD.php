@@ -2,7 +2,6 @@
 function BDDConnexionPDO()
 {
 	$hote='localhost';
-	$port ='3306';
 	$nomBd='site_jeux';
 	$utilisateur='root';
 	$motPasse='';
@@ -10,6 +9,7 @@ function BDDConnexionPDO()
 		$connexion = new PDO('mysql:host='.$hote.';dbname='.$nomBd,$utilisateur,$motPasse);
 		$connexion->exec("SET CHARACTER  SET utf8");
 		$connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
 	}
 	catch(Exception $e)
 	{

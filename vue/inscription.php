@@ -1,26 +1,29 @@
+
+ 
 <?php
 
 $connexion = BDDConnexionPDO();
 
-
-
 if (isset($_POST['i_nom'])) 
 {
-  
+ 
   $_data = [
-    'nom_user'=> 'i_nom',    
-    'prenom_user'=> 'i_prenom',
-    'email_user'=>'i_email',
-    'mdp_user'=>'i_password'
+    'nom_user'=>TestVarPost('i_nom'),    
+    'prenom_user'=>TestVarPost('i_prenom'),
+    'mail_user'=> TestVarPost('i_email'),
+    'mdp_user'=> TestVarPost('i_password'),
   ];
 
  
- 
-    
     $resultat = create($connexion,'utilisateur', $_data);
+	
 
-  
 }
+
+    
+	
+
+
 
 
 ?>
@@ -37,9 +40,6 @@ if (isset($_POST['i_nom']))
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Nouveau client ?
 						</h4>
-						<?php var_dump($_data) ?>
-
-
 
 						<div class="bo4 of-hidden size15 m-b-20">
 							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_nom" id="i_nom" placeholder="nom">
