@@ -1,35 +1,7 @@
 
  
 <?php
-
-$connexion = BDDConnexionPDO();
-
-if (isset($_POST['i_nom'])) 
-{
- 
-  $_data = [
-    'nom_user'=>TestVarPost('i_nom'),    
-    'prenom_user'=>TestVarPost('i_prenom'),
-    'mail_user'=> TestVarPost('i_email'),
-    'mdp_user'=> TestVarPost('i_password'),
-  ];
-
- 
-    $resultat = create($connexion,'utilisateur', $_data);
-	
-
-}
-<<<<<<< Updated upstream
-
-    
-	
-
-
-
-=======
-var_dump($resultat);
->>>>>>> Stashed changes
-
+include("./controleur/c_inscription.php")
 ?>
 
 <section class="bgwhite p-t-66 p-b-60">

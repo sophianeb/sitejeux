@@ -2,21 +2,20 @@
 
 $connexion = BDDConnexionPDO();
 
- if(isset($POST['i_nom']))
- { 
+if (isset($_POST['i_nom'])) 
+{
+	$pass_hache = password_hash($_POST[TestVarPost('i_password')], PASSWORD_DEFAULT);
+ 
   $_data = [
-    'nom_user'=> TestVarPost('i_nom'),    
-    'prenom_user'=> TestVarPost('i_prenom'),
-    'email_user'=>TestVarPost('i_email'),
-    'mdp_user'=>TestVarPost('i_password')
-  ];  
+    'nom_user'=>TestVarPost('i_nom'),    
+    'prenom_user'=>TestVarPost('i_prenom'),
+    'email_user'=> TestVarPost('i_email'),
+    'mdp_user'=> TestVarPost($pass_hash)
+  ];
 
-    
-$resultat = create($connexion,'utilisateur', $_data);
-return($resultat);
+
+    $resultat = create($connexion,'utilisateur', $_data);
+	
 
 }
-
-
-
 ?>
