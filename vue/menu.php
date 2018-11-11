@@ -1,3 +1,4 @@
+<?php include("./controleur/c_connexion.php"); ?>
 <div class="container-menu-header">
 			<div class="topbar">
 				<div class="topbar-social">
@@ -88,25 +89,23 @@
 
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
-							<?php //include("./controleur/c_connexion.php"); ?>
+							
 							<ul class="header-cart-wrapitem">
-						<form class="leave-comment">
+						<form class="leave-comment" method="POST" action="#">
 						Nom
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="c_mail" placeholder="email">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="email" name="c_mail" placeholder="email">
 						</div>
 
 						Mot de passe
 						<div class="bo4 of-hidden size15 m-b-20">
 							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="c_password" placeholder="Mot de passe">
 						</div>
-						</form>
-							<div class="header-cart-buttons">
+						<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="vue/test.php" id=b_connexion class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Connexion
-									</a>
+									<input type="submit" value="Connexion" name="b_connexion" id="b_connexion" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									</input>
 								</div>
 
 								<div class="header-cart-wrapbtn">
@@ -117,6 +116,8 @@
 									</a>
 								</div>
 							</div>
+						</form>
+							
 						</div>
 					</div>
 					<span class="linedivide1"></span>

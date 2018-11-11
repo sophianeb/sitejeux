@@ -1,5 +1,3 @@
-
- 
 <?php
 include("./controleur/c_inscription.php")
 ?>
@@ -18,18 +16,28 @@ include("./controleur/c_inscription.php")
 						</h4>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_nom" id="i_nom" placeholder="nom">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_nom" id="i_nom" placeholder="Nom">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_prenom" id="i_prenom" placeholder="prénom">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_prenom" id="i_prenom" placeholder="Prénom">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_email" id="i_email" placeholder="adresse Email">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_email" id="i_email" placeholder="Email">
 						</div>
 						<div class="bo4 of-hidden size15 m-b-20">
 							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="i_password" id="i_password" placeholder="Nouveau mot de passe">
+						</div>
+
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_adresse" id="i_adresse" placeholder="Votre adresse">
+						</div>
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_ville" id="i_ville" placeholder="Ville">
+						</div>
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_numT" id="i_numT" placeholder="Numéro de téléphone">
 						</div>
 						
 

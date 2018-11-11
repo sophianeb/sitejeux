@@ -42,7 +42,7 @@ foreach ($ref as $key => $value) {
 $sql= " SELECT $items FROM $table where $condition";
 $util=$connexion->prepare($sql);
 $util->execute();
-$util->setFetchMode (PDO::FETCH_OBJ);
+$util->setFetchMode(PDO::FETCH_OBJ);
 return $util->fetchall();
 
 
