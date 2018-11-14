@@ -37,7 +37,7 @@ include("./controleur/c_inscription.php")
 							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_ville" id="i_ville" placeholder="Ville">
 						</div>
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_numT" id="i_numT" placeholder="Numéro de téléphone">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="tel" name="i_numT" id="i_numT" placeholder="Numéro de téléphone">
 						</div>
 						
 

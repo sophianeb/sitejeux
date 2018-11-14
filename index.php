@@ -1,4 +1,7 @@
-<?php require_once("./modele/fonction.php");
+<?php 
+session_start();
+            
+require_once("./modele/fonction.php");
 require_once("./modele/connexionBDD.php") 
 ?>
 <!DOCTYPE html>
