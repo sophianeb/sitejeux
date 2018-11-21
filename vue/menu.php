@@ -90,17 +90,10 @@
 						<div class="header-cart header-dropdown">
 							
 							<ul class="header-cart-wrapitem">
-								<?php
-                session_start();
-                if($_SESSION['c_email'] !== ""){
-                    $user = $_SESSION['c_email'];
-                    // afficher un message
-                    echo "Bonjour $user, vous êtes connecté";	
-                }
-            ?>
+								
 						<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="index.php?page=connexion" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="index.php?page=login" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Connexion
 									</a>
 								

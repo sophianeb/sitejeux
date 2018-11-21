@@ -1,6 +1,5 @@
 <?php 
 session_start();
-            
 require_once("./modele/fonction.php");
 require_once("./modele/connexionBDD.php") 
 ?>
@@ -45,7 +44,7 @@ require_once("./modele/connexionBDD.php")
 
 	<!-- Header -->
 	<header class="header1">
-		<!-- Header desktop -->
+<!-- Header desktop -->
 		<?php include("vue/menu.php"); ?>
 	</header>
 

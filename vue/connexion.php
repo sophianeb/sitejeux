@@ -9,7 +9,7 @@
 				</div>
 
 				<div class="col-md-6 p-b-30">
-					<form class="leave-comment"method="POST">
+					<form class="leave-comment"method="POST" id="fconnexion" name="fconnexion">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Connexion
 							
@@ -26,11 +26,20 @@
 
 						<div class="w-size25">
 							<!-- Button -->
-							<button value="LOGIN" type="submit" name="b_connexion" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+							<button value="LOGIN" type="submit" name="fconnexion" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
 								Connexion
 							</button>
 						</div>
+						 <?php
+
+                if(isset($_GET['erreur'])){
+                    $err = $_GET['erreur'];
+                    if($err==1 || $err==2)
+                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                }
+                ?>
 					</form>
+
 				</div>
 			</div>
 		</div>

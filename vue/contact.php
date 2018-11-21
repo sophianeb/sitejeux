@@ -11,7 +11,14 @@
 					<form class="leave-comment">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Send us your message
-							
+							 <?php
+                session_start();
+                if($_SESSION['c_email'] !== ""){
+                    $user = $_SESSION['c_email'];
+                    // afficher un message
+                    echo "Bonjour $user, vous êtes connecté";
+                }
+            ?>
 						</h4>
 
 						<div class="bo4 of-hidden size15 m-b-20">
