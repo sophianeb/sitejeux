@@ -12,12 +12,9 @@
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Send us your message
 							 <?php
-                session_start();
-                if($_SESSION['c_email'] !== ""){
-                    $user = $_SESSION['c_email'];
-                    // afficher un message
-                    echo "Bonjour $user, vous êtes connecté";
-                }
+                
+                    echo $_SESSION['id_user'];
+                
             ?>
 						</h4>
 

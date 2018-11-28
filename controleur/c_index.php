@@ -22,8 +22,8 @@
                   case 'inscription':
                     include("./vue/inscription.php");
                   break;
-                  case 'principale':
-                    include("./vue/contact.php");
+                  case 'deconnexion':
+                    include("./vue/deconnexion.php");
                   break;
 
                  

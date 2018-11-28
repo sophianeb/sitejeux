@@ -2347,3 +2347,16 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 
+.roundedImage{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:90px;
+    height:90px;
+}
+
+
+
+
+

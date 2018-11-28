@@ -1,3 +1,4 @@
+<?php include("./controleur/c_connexion.php"); ?> 
 <div class="container-menu-header">
 			<div class="topbar">
 				<div class="topbar-social">
@@ -83,30 +84,75 @@
 				<!-- Header Icon -->
 				<div class="header-icons">
 					<div class="header-wrapicon2">
+						<?php if(isset($_SESSION['id_user'])){ ?><img src="C:\wamp64\www\sitejeux\public\imageuser\<?= $_SESSION['id_user']  ?>" class="header-icon1 js-show-header-dropdown" alt="ICON"> 
+						<?php }
+						else{ ?>
 						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						
-
-						<!-- Header cart noti -->
+					<?php } ?>
 						<div class="header-cart header-dropdown">
 							
 							<ul class="header-cart-wrapitem">
 								
 						<div class="header-cart-wrapbtn">
-									<!-- Button -->
+									
+
+						<!-- Header cart noti -->
+						<?php if (isset($_SESSION['c_email']))
+									{ 
+               
+                ?>
+
+						<!-- Header cart noti -->
+						
+							
+								<li class="header-cart-item">
+									
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Mon compte
+										</a>
+
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									
+
+									<div class="header-cart-item-txt">
+										<a href="index.php?page=deconnexion" class="header-cart-item-name">
+											Deconnexion
+										</a>
+
+									</div>
+								</li>
+							</div>
+						</div>
+						
+
+									<?php }else
+									{ ?><!-- Button -->
 									<a href="index.php?page=login" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Connexion
 									</a>
-								
-									<!-- Button -->
-									
+								</div>
 									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Inscription
 									</a>
 								</div>
+									<?php
+                
+            }
+            ?>
+
+								
+									<!-- Button -->
+									
+								
 						
 						
 							
-						</div>
+						
 					</div>
 					<span class="linedivide1"></span>
 
