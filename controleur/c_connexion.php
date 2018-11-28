@@ -35,7 +35,7 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         { 
            $_SESSION['c_email'] = $username;
-           $_SESSION['id'] = $id;
+           $_SESSION['id_user'] = $reponse['id_user'];
            
            header('Location: index.php?page=login');
         }
