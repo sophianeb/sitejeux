@@ -25,8 +25,7 @@
                   case 'deconnexion':
                     include("./vue/deconnexion.php");
                   break;
-                  case 'profil':
-                  include("./vue/profil_modif.php");
+
                  
                    case 'login':
                     include("./vue/connexion.php");
