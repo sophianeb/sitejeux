@@ -19,7 +19,7 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
     
     if($username !== "" && $password !== "")
     {
-         $requete2 = "SELECT id_user='".$id."' FROM utilisateur where 
+         $requete2 = "SELECT * FROM utilisateur where 
               mail_user = '".$username."' and mdp_user = '".$password."' ";
 
         $exec_requete2 = mysqli_query($db,$requete2);
@@ -29,15 +29,19 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
 
         $exec_requete = mysqli_query($db,$requete);
         $reponse = mysqli_fetch_array($exec_requete);
+
+       $image = $reponse2['image'];
         $count = $reponse['count(*)'];
         
         
-        if($count!=0) // nom d'utilisateur et mot de passe correctes
+        if($count=1) // nom d'utilisateur et mot de passe correctes
         { 
            $_SESSION['c_email'] = $username;
-           $_SESSION['id_user'] = $reponse['id_user'];
+           $_SESSION['image_user'] = $image;
            
-           header('Location: index.php?page=login');
+
+           
+           header('Location: index.php?page=accueil');
         }
         else
         {

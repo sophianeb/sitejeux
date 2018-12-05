@@ -275,6 +275,6 @@ require_once("./modele/connexionBDD.php")
 
 <!--===============================================================================================-->
 	<script src="template/js/main.js"></script>
-
+<a href="http://btsinfo-rousseau53.fr:11017/2017-destock/index.php"><img src="./public/images/icons/sponsorD.png"></a>	
 </body>
 </html>

@@ -84,7 +84,7 @@
 				<!-- Header Icon -->
 				<div class="header-icons">
 					<div class="header-wrapicon2">
-						<?php if(isset($_SESSION['id_user'])){ ?><img src="C:\wamp64\www\sitejeux\public\imageuser\<?= $_SESSION['id_user']  ?>" class="header-icon1 js-show-header-dropdown" alt="ICON"> 
+						<?php if(isset($_SESSION['c_email'])){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="header-icon1 js-show-header-dropdown" alt="ICON"> 
 						<?php }
 						else{ ?>
 						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
@@ -139,7 +139,7 @@
 									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Inscription
 									</a>
-								</div>
+				</div>
 									<?php
                 
             }
@@ -465,3 +465,4 @@
 				</ul>
 			</nav>
 		</div>
+		

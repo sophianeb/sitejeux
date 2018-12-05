@@ -13,7 +13,7 @@
 							Send us your message
 							 <?php
                 
-                    echo $_SESSION['id'];
+                    echo $_SESSION['id_user'];
                 
             ?>
 						</h4>
