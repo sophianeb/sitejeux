@@ -109,7 +109,7 @@
 									
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="index.php?page=profil" class="header-cart-item-name">
 											Mon compte
 										</a>
 
@@ -254,50 +254,88 @@
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
+							<?php if(isset($_SESSION['c_email'])){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="header-icon1 js-show-header-dropdown" alt="ICON"> 
+						<?php }
+						else{ ?>
 						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+					<?php } ?>
+						<div class="header-cart header-dropdown">
+							
+							<ul class="header-cart-wrapitem">
+								
+						<div class="header-cart-wrapbtn">
+									
+
+						<!-- Header cart noti -->
+						<?php if (isset($_SESSION['c_email']))
+									{ 
+               
+                ?>
+
+						<!-- Header cart noti -->
 						
+							
+								<li class="header-cart-item">
+									
+
+									<div class="header-cart-item-txt">
+										<a href="index?page=profil" class="header-cart-item-name">
+											Mon compte
+										</a>
+
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									
+
+									<div class="header-cart-item-txt">
+										<a href="index.php?page=deconnexion" class="header-cart-item-name">
+											Deconnexion
+										</a>
+
+									</div>
+								</li>
+							</div>
+						</div>
+						
+
+									<?php }else
+									{ ?><!-- Button -->
+									<a href="index.php?page=login" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Connexion
+									</a>
+								</div>
+									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Inscription
+									</a>
+				</div>
+									<?php
+                
+            }
+            ?>
+
+								
+									<!-- Button -->
+									
+								
+						
+						
+							
+						
+					</div>
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<img src="./template/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
-						<form class="leave-comment">
-						Nom
-						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Nom">
-						</div>
-
-						Mot de passe
-						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="phone-number" placeholder="Mot de passe">
-						</div>
-						</form>
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="vue/test.php" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Connexion
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									
-									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Inscription
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="header-wrapicon2">
-					<img src="./template/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="./template/images/icons/item-cart-01.jpg" alt="IMG">
+										<img src="./template/images/item-cart-01.jpg" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -358,14 +396,17 @@
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
+									
 									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Check Out
 									</a>
 								</div>
 							</div>
 						</div>
-					
-</div>
+					</div>
+				</div>
+			</div>
+						
 </div>
 		
 
@@ -465,4 +506,3 @@
 				</ul>
 			</nav>
 		</div>
-		
