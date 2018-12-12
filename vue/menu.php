@@ -46,7 +46,7 @@
 								<ul class="sub_menu">
 									<li><a href="index.html">Console</a>
 										<ul class="sub_menu">
-											<li><a href="index.php"><img src="./public/images/icons/ps4_logo.png" style="width:50px; height:40px;"> PS4</a></li>
+											<li><a href="index.php?page=jeuxPS4"><img src="./public/images/icons/ps4_logo.png" style="width:50px; height:40px;"> PS4</a></li>
 											<li><a href="home-02.html"><img src="./public/images/icons/xboxone_logo.png" style="width:50px; height:40px;"> XBOX ONE</a></li>
 											<li><a href="home-03.html"><img src="./public/images/icons/ninswitch_logo.png" style="width:50px; height:40px;"> Nintendo Swich</a></li>
 										</ul>
@@ -84,7 +84,7 @@
 				<!-- Header Icon -->
 				<div class="header-icons">
 					<div class="header-wrapicon2">
-						<?php if(isset($_SESSION['c_email'])){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="header-icon1 js-show-header-dropdown" alt="ICON"> 
+						<?php if(isset($_SESSION['c_email'])){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="tailleimageP roundedImage header-icon1 js-show-header-dropdown" alt="ICON"> 
 						<?php }
 						else{ ?>
 						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
@@ -109,7 +109,7 @@
 									
 
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
+										<a href="index.php?page=profil" class="header-cart-item-name">
 											Mon compte
 										</a>
 

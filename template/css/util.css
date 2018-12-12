@@ -4137,3 +4137,17 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 		width: 100%;
 	}
 }
+.roundedImage{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    }
+.tailleimageM{
+width:90px;
+height:90px;
+}
+.tailleimageP{
+width:27px;
+height:27px;
+}

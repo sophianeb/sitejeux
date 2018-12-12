@@ -1,0 +1,35 @@
+<?php 
+session_start();
+$db_username = 'root';
+    $db_password = '';
+    $db_name     = 'site_jeux';
+    $db_host     = 'localhost';
+    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
+           or die('could not connect to database');
+    $id='';
+    // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
+  
+    
+    
+         $requete2 = "SELECT * FROM jeux_ps4 ";
+              
+
+        $exec_requete2 = mysqli_query($db,$requete2);
+        $reponse2 = mysqli_fetch_array($exec_requete2);
+        
+      
+
+       $nom = $reponse2['nom_jeux_ps4'];
+       $prix = $reponse2['prix_jeux_ps4'];
+       $decription = $reponse2['decription_jeux_ps4'];
+       $image = $reponse2['image_jeux_ps4'];
+   
+           $_SESSION['nom_jeux_ps4'] = $nom;
+           $_SESSION['prix_jeux_ps4'] = $prix;
+           $_SESSION['decription_jeux_ps4'] = $decription;
+           $_SESSION['image_jeux_ps4'] = $image;
+          
+          
+
+
+          ?>

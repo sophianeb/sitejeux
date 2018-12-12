@@ -24,6 +24,7 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
 
         $exec_requete2 = mysqli_query($db,$requete2);
         $reponse2 = mysqli_fetch_array($exec_requete2);
+        
         $requete = "SELECT count(*) FROM utilisateur where 
               mail_user = '".$username."' and mdp_user = '".$password."' ";
 
@@ -31,13 +32,28 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
         $reponse = mysqli_fetch_array($exec_requete);
 
        $image = $reponse2['image'];
+       $nom = $reponse2['nom_user'];
+       $prenom = $reponse2['prenom_user'];
+       $adresse = $reponse2['adresse_user'];
+       $numtel = $reponse2['numT_user'];
+       $ville = $reponse2['ville_user'];
+       $money = $reponse2['money_user'];
+      
         $count = $reponse['count(*)'];
         
         
         if($count=1) // nom d'utilisateur et mot de passe correctes
         { 
            $_SESSION['c_email'] = $username;
+           $_SESSION['nom'] = $nom;
            $_SESSION['image_user'] = $image;
+           $_SESSION['prenom'] = $prenom;
+           $_SESSION['adresse'] = $adresse;
+           $_SESSION['numtel'] = $numtel;
+           $_SESSION['ville'] = $ville;
+           $_SESSION['money'] = $money;
+           
+           
            
 
            

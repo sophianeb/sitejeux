@@ -25,6 +25,12 @@
                   case 'deconnexion':
                     include("./vue/deconnexion.php");
                   break;
+                  case 'profil':
+                    include("./vue/profil_modif.php");
+                  break;
+                  case 'jeuxPS4':
+                    include("./vue/j_ps4.php");
+                  break;
 
                  
                    case 'login':
