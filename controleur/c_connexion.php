@@ -1,4 +1,5 @@
 <?php
+$connexion = BDDConnexionPDO();
 if(isset($_POST['fconnexion']))
 {
 
@@ -15,7 +16,7 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
     $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['c_email'])); 
-    $password = mysqli_real_escape_string($db,htmlspecialchars($_POST['c_password']));
+    $password = md5(mysqli_real_escape_string($db,htmlspecialchars($_POST['c_password'])));
     
     if($username !== "" && $password !== "")
     {

@@ -31,6 +31,27 @@
                   case 'jeuxPS4':
                     include("./vue/j_ps4.php");
                   break;
+                  case 'jeuxXBOX':
+                    include("./vue/j_xbox.php");
+                  break;
+                  case 'jeuxSteam':
+                    include("./vue/j_steam.php");
+                  break;
+                  case 'jeuxOrigine':
+                    include("./vue/j_origine.php");
+                  break;
+                  case 'jeuxUplay':
+                    include("./vue/j_uplay.php");
+                  break;
+                  case 'pageproduit':
+                    include("./vue/detail_produit.php");
+                  break;
+                  case 'pagepanier':
+                    include("./vue/panier.php");
+                  break;
+                  case 'pagepaiment':
+                    include("./vue/paiment.php");
+                  break;
 
                  
                    case 'login':

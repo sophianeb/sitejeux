@@ -43,6 +43,7 @@ $sql= " SELECT $items FROM $table where $condition";
 $util=$connexion->prepare($sql);
 $util->execute();
 $util->setFetchMode(PDO::FETCH_OBJ);
+//var_dump($sql);
 return $util->fetchall();
 
 
@@ -142,4 +143,5 @@ else
       ".$text."
     </div>";
 }}
+
 ?>

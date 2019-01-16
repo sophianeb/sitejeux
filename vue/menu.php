@@ -29,7 +29,7 @@
 			<div class="wrap_header">
 				<!-- Logo -->
 				<a href="index.php" class="logo">
-					<img src="./public/images/icons/logosite.png" style="width:40px; height:40px" alt="IMG-LOGO">
+					<img src="./public/images/icons/logosite1.png" style="width:50px; height:60px" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu -->
@@ -46,16 +46,16 @@
 								<ul class="sub_menu">
 									<li><a href="index.html">Console</a>
 										<ul class="sub_menu">
-											<li><a href="index.php?page=jeuxPS4"><img src="./public/images/icons/ps4_logo.png" style="width:50px; height:40px;"> PS4</a></li>
-											<li><a href="home-02.html"><img src="./public/images/icons/xboxone_logo.png" style="width:50px; height:40px;"> XBOX ONE</a></li>
-											<li><a href="home-03.html"><img src="./public/images/icons/ninswitch_logo.png" style="width:50px; height:40px;"> Nintendo Swich</a></li>
+											<li><a href="index.php?page=jeuxPS4"><img src="./public/images/icons/ps4_logo.png" style="width:50px; height:40px;">Playstion 4</a></li>
+											<li><a href="index.php?page=jeuxXBOX"><img src="./public/images/icons/xboxone_logo.png" style="width:50px; height:40px;">Xbox One</a></li>
+											
 										</ul>
 							</li>
 									<li><a href="#">PC</a>
 										<ul class="sub_menu">
-												<li>Origine</a></li>
-												<li><a href="home-02.html">Steam</a></li>
-												<li><a href="home-03.html">Ubisoft</a></li>
+												<li><a href="index.php?page=jeuxOrigine"><img src="./public/images/icons/origine_logo.png" style="width:50px; height:40px;">Origine</a></li>
+												<li><a href="index.php?page=jeuxSteam"><img src="./public/images/icons/steam_logo.png" style="width:50px; height:40px;">Steam</a></li>
+												<li><a href="index.php?page=jeuxuplay"><img src="./public/images/icons/uplay_logo.jpg" style="width:50px; height:40px;">Uplay</a></li>
 										</ul>
 									</li>
 									<li><a href="home-03.html">Accessoire</a></li>
@@ -84,10 +84,10 @@
 				<!-- Header Icon -->
 				<div class="header-icons">
 					<div class="header-wrapicon2">
-						<?php if(isset($_SESSION['c_email'])){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="tailleimageP roundedImage header-icon1 js-show-header-dropdown" alt="ICON"> 
+						<?php if(isset($_SESSION['c_email']) && ($_SESSION['image_user'] != '')){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="tailleimageP roundedImage header-icon1 js-show-header-dropdown" alt="ICON"> 
 						<?php }
 						else{ ?>
-						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="./public/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 					<?php } ?>
 						<div class="header-cart header-dropdown">
 							
@@ -163,63 +163,43 @@
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
+								
+<?php $lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_panier, quantite_panier_utilisateur, image_article_panier');
+$total=0;
+foreach ($lire2 as $uneligne ) {
+	echo '<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="./template/images/item-cart-01.jpg" alt="IMG">
+										<img src="./public/'.$uneligne->image_article_panier.'" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
 										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
+											'.$uneligne->nom_article_panier.'
 										</a>
 
 										<span class="header-cart-item-info">
-											1 x $19.00
+											'.$uneligne->prix_article_panier.'€
 										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="./template/images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
 										<span class="header-cart-item-info">
-											1 x $39.00
+											x'.$uneligne->quantite_panier_utilisateur.'
 										</span>
 									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="./template/images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
+								</li>';
+								$total= $total + $uneligne->prix_article_panier;
+ 	# code...
+ } ?>
+									
+									
 							</ul>
 
 							<div class="header-cart-total">
-								Total: $75.00
+								Total:<?= $total ?>€
 							</div>
 
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="index.php?page=pagepanier" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 								</div>
@@ -233,7 +213,9 @@
 								</div>
 							</div>
 						</div>
+					
 					</div>
+				<!-- -->
 				</div>
 			</div>
 		</div>

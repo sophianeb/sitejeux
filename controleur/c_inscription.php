@@ -4,7 +4,7 @@ $connexion = BDDConnexionPDO();
 
 if (isset($_POST['i_nom'])) 
 {
-	$pass_hash = password_hash($_POST['i_password'], PASSWORD_DEFAULT);
+	$pass_hash = md5($_POST['i_password']) ;
  
   $_data = [
     'nom_user'=>TestVarPost('i_nom'),    

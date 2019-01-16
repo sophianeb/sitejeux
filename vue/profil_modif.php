@@ -1,3 +1,48 @@
+<?php if (isset($_FILES['fichier'])) 
+        {
+            if( $_FILES['fichier']['name'] != '')
+                {       
+                    $dossier = './public/';
+                    $fichier = basename($_FILES['fichier']['name']);
+                    $taille_maxi = 400000;
+                    $taille = filesize($_FILES['fichier']['tmp_name']);
+                    $extensions = array('.jpg');
+                    $extension = strrchr($_FILES['fichier']['name'], '.'); 
+                    //Début des vérifications de sécurité...
+                    if (!in_array($extension, $extensions)) //Si l'extension n'est pas dans le tableau
+                        {
+                         $alert2 = message("danger", "<strong>Erreur! </strong>Vous devez uploader un fichier de type pdf");
+                          $erreur = true;
+                        }
+                    if ($taille>$taille_maxi)
+                        {
+                          $alert2 = message("danger", "<strong>Erreur! </strong> Le fichier est trop gros... $taille");
+                          $erreur = true;
+                        }
+                    if (!isset($erreur)) //S'il n'y a pas d'erreur, on upload
+                        {
+                           //On formate le nom du fichier ici...
+                          $fichier = strtr($fichier, 
+                                'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
+                                'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+                          $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
+                          if (move_uploaded_file($_FILES['fichier']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+                             {
+                                  $alert2 = message("success", "<strong>OK! </strong>importation effectué avec succès !");
+                             }
+                          else //Sinon (la fonction renvoie FALSE).
+                             {
+                                $alert2 = message("danger", "<strong>Erreur! </strong>Echec de l'importation du PDF"); 
+                             }
+                        } 
+
+                }
+            else
+                {
+                  $alert2 = message("warning", "<strong>NB: </strong>Pas de PDF enregistré");
+                }
+        }
+?>
 <div class="container">
         <div class="row">
             <div class="col-12">
@@ -7,12 +52,13 @@
                         <div class="card-title mb-4">
                             <div class="d-flex justify-content-start">
                                 <div class="image-container">
-                                    <?php if(isset($_SESSION['c_email'])){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="tailleimageM roundedImage header-icon1 js-show-header-dropdown" alt="ICON"> 
-                        <?php }
-                       ?>
+                                    <?php if(isset($_SESSION['c_email'])){ if($_SESSION['image_user'] != ''){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="tailleimageM roundedImage header-icon1 js-show-header-dropdown" alt="ICON"> 
+                        <?php }}else{
+                       ?><img src="./public/images/icons/icon-header-01.png?>" class="tailleimageM roundedImage header-icon1 js-show-header-dropdown" alt="ICON"><?php } ?>
                                     <div class="middle">
-                                        <input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change" />
-                                        <input type="file" style="display: none;" id="profilePicture" name="file" />
+                                        <input type="file" name="fichier" class="btn btn-secondary" value="changer" />
+                                        
+                                        
                                     </div>
                                 </div>
                                 <div class="userData ml-3">
@@ -101,7 +147,7 @@
                     </div>
 
                 </div>
-                <?var_dump($_SESSION);
+                <?php var_dump($_SESSION);?>
             </div>
         </div>
     </div>
