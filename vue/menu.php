@@ -185,7 +185,7 @@ foreach ($lire2 as $uneligne ) {
 										</span>
 									</div>
 								</li>';
-								$total= $total + $uneligne->prix_article_panier;
+								$total= $total + ($uneligne->prix_article_panier * $uneligne->quantite_panier_utilisateur);
  	# code...
  } ?>
 									

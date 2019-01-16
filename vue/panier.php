@@ -11,9 +11,11 @@
 							<th class="column-4 p-l-70">Quantity</th>
 							<th class="column-5">Total</th>
 						</tr>
-<?php $lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_panier, quantite_panier_utilisateur, image_article_panier');
-$total=0;
+<?php $lire2=read($connexion,'panier_utilisateurs','nom_article_panier,ref_commande ,prix_article_panier, quantite_panier_utilisateur,id_panier, image_article_panier');
+$_SESSION['total']=0;
+$id =0;
 foreach ($lire2 as $uneligne ) {
+$id = $uneligne->ref_commande;
 	echo '
 						<tr class="table-row">
 							<td class="column-1">
@@ -38,13 +40,15 @@ foreach ($lire2 as $uneligne ) {
 							</td>
 							<td class="column-5">'.$uneligne->prix_article_panier*$uneligne->quantite_panier_utilisateur.'€</td>
 						</tr>
-
-						 ';
+						';$_SESSION['total']= $_SESSION['total'] + ($uneligne->prix_article_panier * $uneligne->quantite_panier_utilisateur);
 						}?>
+
+						
 					</table>
 
 				</div>
 			</div>
+			
 
 			<div class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
 				<div class="flex-w flex-m w-full-sm">
@@ -81,7 +85,7 @@ foreach ($lire2 as $uneligne ) {
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						$39.00
+						<?= $_SESSION['total'] ?>€
 					</span>
 				</div>
  
@@ -133,16 +137,17 @@ foreach ($lire2 as $uneligne ) {
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						$39.00
+						<?= $total ?>
 					</span>
 				</div>
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
-					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+					<a class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" href="index.php?page=pagepaiment&amp;ref=<?= $id ?>"> 
 						Proceed to Checkout
-					</button>
+					</a>
 				</div>
 			</div>
-		</div>
+		</div> 
+		'
 	</section>

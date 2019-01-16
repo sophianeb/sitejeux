@@ -1,13 +1,16 @@
+
 <section class="bgwhite p-t-66 p-b-60">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 p-b-30">
+				<div class="col-md-4 p-b-30">
+
 					<div class="p-r-20 p-r-0-lg">
 						<div class="contact-map size21" id="google_map" data-map-x="40.614439" data-map-y="-73.926781" data-pin="images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div>
 					</div>
 				</div>
 
 				<div class="col-md-3 p-b-30">
+					<div style="color:red">Total = <?= $_SESSION['total'] ?> €</div>
 					<form class="leave-comment">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							paiement
@@ -32,7 +35,7 @@
 							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="numcart" placeholder="numero de carte" min="16" max="19">
 						</div>
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="number" name="codecart" placeholder="numero de carte" min="3" max="3">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="codecart" placeholder="numero de carte" min="3" max="3">
 						</div>
 
 
