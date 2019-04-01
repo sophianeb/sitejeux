@@ -32,6 +32,7 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
         $exec_requete = mysqli_query($db,$requete);
         $reponse = mysqli_fetch_array($exec_requete);
 
+       $id = $reponse2['id_user'];
        $image = $reponse2['image'];
        $nom = $reponse2['nom_user'];
        $prenom = $reponse2['prenom_user'];
@@ -45,6 +46,7 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
         
         if($count=1) // nom d'utilisateur et mot de passe correctes
         { 
+           $_SESSION['iduser'] = $id;
            $_SESSION['c_email'] = $username;
            $_SESSION['nom'] = $nom;
            $_SESSION['image_user'] = $image;

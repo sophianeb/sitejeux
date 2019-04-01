@@ -13,6 +13,10 @@
                   case 'accueil':
                     include("./vue/accueil.php");
                   break;
+                  case 'mescommande':
+                    include("./vue/mescommande.php");
+                  break;
+                  
                   case 'liste_articles':
                     include("./vue/liste_articles.php");
                   break;
@@ -28,8 +32,8 @@
                   case 'profil':
                     include("./vue/profil_modif.php");
                   break;
-                  case 'jeuxPS4':
-                    include("./vue/j_ps4.php");
+                  case 'pagejeux':
+                    include("./vue/pagejeux.php");
                   break;
                   case 'jeuxXBOX':
                     include("./vue/j_xbox.php");

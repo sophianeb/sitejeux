@@ -49,7 +49,7 @@ require_once("./modele/connexionBDD.php")
 	</header>
 
 <div>	<!-- Slide1 -->
-	<?php include("controleur/c_index.php"); ?>
+	<?php include("route.php"); ?>
 </div>
 	<!-- Footer -->
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">

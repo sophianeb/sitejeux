@@ -1,3 +1,24 @@
+<?php 
+$connexion = BDDconnexionPDO();
+$cle = GenerateurCleSteam();
+$lire1=read($connexion,'utilisateur','*',['mail_user' => $_SESSION['c_email']],' ');
+
+$lire2=read($connexion,'panier_utilisateurs','*',[0=>0],' ');
+if (isset($_POST['btnaccepte']))
+{ 
+
+
+foreach ($lire1 as $uneligne ) {
+		$id = $uneligne->id_user;
+}
+foreach ($lire2 as $uneligne2 ) {
+
+		$resultat = create($connexion,'historiquecommande',['id_user'=>$id, 'nom_article_hist'=>$uneligne2->nom_article_panier, 'prix_article_hist'=>$uneligne2->prix_article_panier, 'cle_jeux'=> $cle, 'image_article_hist'=> $uneligne2->image_article_panier, 'quantite_commande_hist'=>$uneligne2->quantite_commande_panier]);
+
+               
+}
+$suppr = delete($connexion,'panier_utilisateurs',['ref_commande' => '1']);
+}	 ?>
 
 <section class="bgwhite p-t-66 p-b-60">
 		<div class="container">
@@ -11,7 +32,7 @@
 
 				<div class="col-md-3 p-b-30">
 					<div style="color:red">Total = <?= $_SESSION['total'] ?> €</div>
-					<form class="leave-comment">
+					<form class="leave-comment" method="POST" name="btnaccepte" id="btnaccepte">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							paiement
 										<div>
@@ -41,7 +62,7 @@
 
 						<div class="w-size25">
 							<!-- Button -->
-							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+							<button name="btnaccepte" id="btnaccepte" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
 								accepte
 							</button>
 						</div>

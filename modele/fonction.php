@@ -2,6 +2,48 @@
 error_reporting(E_ALL);
 ?>
 <?php 
+function readfiltre($connexion, $table, $items,$condition)
+{
+  $condition = '';
+
+$sql= " SELECT $items FROM $table ORDER BY $condition";
+$util=$connexion->prepare($sql);
+$util->execute();
+$util->setFetchMode(PDO::FETCH_OBJ);
+//var_dump($sql);
+return $util->fetchall();
+
+
+
+
+
+}
+
+function GenerateurCleSteam(){
+  $cle = "";
+  $NouL = null;
+  $alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+
+  for ($v=0; $v < 5; $v++) { 
+    for ($i=0; $i < 5; $i++) { 
+      $NouL = rand(1, 2);
+      if ($NouL == 1) {
+        $lettre_aleatoire=$alphabet[rand(0,25)];
+        $cle = $cle.$lettre_aleatoire;
+      }
+      else{
+        $nombre_aleatoire = rand(1, 9);
+        $cle = $cle.$nombre_aleatoire;
+      }
+    }
+
+    if($v != 4){
+      $cle = $cle."-";
+    }
+  }
+  return $cle;
+}
 function create($connexion, $table, $items=[]) {
 
   $head = "";
@@ -32,14 +74,15 @@ function create($connexion, $table, $items=[]) {
 
   
 }
-function read($connexion, $table, $items,$ref=[1=>1])
+function read($connexion, $table, $items,$ref=[1=>1], $autre)
 {
+  $autre='';
   $condition = '';
 
 foreach ($ref as $key => $value) {
       $condition = $key." IN ('".$value."')";
     }
-$sql= " SELECT $items FROM $table where $condition";
+$sql= " SELECT $items FROM $table $autre where $condition " ;
 $util=$connexion->prepare($sql);
 $util->execute();
 $util->setFetchMode(PDO::FETCH_OBJ);
@@ -58,7 +101,7 @@ function update($connexion, $table, $items=[], $ref=[]) {
   $data = [];
   
     foreach ($items as $key => $item) {
-      $head .= $key."=?,";
+      $head .= $key."=". $item."1";
       $data[] = $item; 
   }
   $head = substr($head, 0, -1);
@@ -69,7 +112,8 @@ function update($connexion, $table, $items=[], $ref=[]) {
   }
   
   $sql ="UPDATE $table SET $head WHERE $condition"; 
-   
+   var_dump($sql);
+
   
  
   $resultat = $connexion->prepare($sql);

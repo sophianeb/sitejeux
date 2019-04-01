@@ -1,3 +1,6 @@
+<?php if (isset($_SESSION['c_email']))
+{ ?>
+              
 <section class="cart bgwhite p-t-70 p-b-100">
 		<div class="container">
 			<!-- Cart item -->
@@ -11,8 +14,9 @@
 							<th class="column-4 p-l-70">Quantity</th>
 							<th class="column-5">Total</th>
 						</tr>
-<?php $lire2=read($connexion,'panier_utilisateurs','nom_article_panier,ref_commande ,prix_article_panier, quantite_panier_utilisateur,id_panier, image_article_panier');
+<?php $lire2=read($connexion,'panier_utilisateurs','nom_article_panier,ref_commande ,prix_article_panier, quantite_panier_utilisateur,id_panier, image_article_panier',[0=>0],' ');
 $_SESSION['total']=0;
+
 $id =0;
 foreach ($lire2 as $uneligne ) {
 $id = $uneligne->ref_commande;
@@ -40,8 +44,10 @@ $id = $uneligne->ref_commande;
 							</td>
 							<td class="column-5">'.$uneligne->prix_article_panier*$uneligne->quantite_panier_utilisateur.'€</td>
 						</tr>
-						';$_SESSION['total']= $_SESSION['total'] + ($uneligne->prix_article_panier * $uneligne->quantite_panier_utilisateur);
-						}?>
+						';
+						$_SESSION['total']= $_SESSION['total'] + ($uneligne->prix_article_panier * $uneligne->quantite_panier_utilisateur);
+						
+						} ?>
 
 						
 					</table>
@@ -149,5 +155,21 @@ $id = $uneligne->ref_commande;
 				</div>
 			</div>
 		</div> 
-		'
+		
 	</section>
+<?php 
+}
+else
+{?>
+
+	
+	
+								<a href="index.php?page=login" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Connexion
+									</a>
+									<br>
+								
+									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Inscription
+									</a>
+<?php } ?>

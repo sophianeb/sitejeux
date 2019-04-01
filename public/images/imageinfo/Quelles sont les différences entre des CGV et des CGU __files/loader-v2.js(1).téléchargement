@@ -1,0 +1,102 @@
+(function() {
+
+    var __hs_cta_json = {"css":"a#cta_button_2458562_3d96c6e5-15bd-49f7-83b9-be8428a15e37 {\n  -webkit-font-smoothing:antialiased; \n  cursor:pointer; \n  -moz-user-select:none; \n  -webkit-user-select:none; \n  -o-user-select:none; \n  user-select:none; \n  display:inline-block; \n  font-weight:bold; \n  text-align:center; \n  text-decoration:none; \n  font-family:sans-serif; \n  background:rgb(68,68,68); \n  color:rgb(255, 255, 255); \n  border:2px solid rgb(34,34,34); \n  text-shadow:0px -1px rgb(20,20,20); \n  line-height:1.5em; \n  padding:6px 18px; \nborder:none; \ndisplay:block ;  \nwidth:80%;\nmargin:auto;\n}\na#cta_button_2458562_3d96c6e5-15bd-49f7-83b9-be8428a15e37:hover {\nbackground:rgb(74,74,74); \ncolor:rgb(255,255,255); \n}\na#cta_button_2458562_3d96c6e5-15bd-49f7-83b9-be8428a15e37:active, #cta_button_2458562_3d96c6e5-15bd-49f7-83b9-be8428a15e37:active:hover {\nbackground:rgb(54,54,54); \ncolor:rgb(244,244,244); \n}\n\n","image_html":"<a id=\"cta_button_2458562_3d96c6e5-15bd-49f7-83b9-be8428a15e37\" class=\"cta_button\" href=\"/cs/c/?cta_guid=3d96c6e5-15bd-49f7-83b9-be8428a15e37&placement_guid=0d5390dd-1adf-4cd2-9c94-c3b8287a46a2&portal_id=2458562&canon=https%3A%2F%2Fwww.captaincontrat.com%2Farticles-droit-commercial%2Fdifference-cgv-cgu&redirect_url=APefjpF123zkhaaLFIeSZihSr0R70d7J9pzJ_66eRfQqSaCBddf0G9DqvHCWG-p0AFKhNuAs_XSBTVoWk8cRrEfsyecN5juFtN9HAFxDHS12FrZj-DKZCiIcp_5EYn4kZnTpNYR4dK10W_nFgQyTD1ndfbjvI6hl5DoqYdoOmH9wpO95Xl0Zb12Jz1RgBpvLiI-D2aSkZ9ZizlDOlQsRrMvj7U7jFRW5ktcQgfGGQyZJqGZq5i6DzepfGTGGJo570s3xH3TTS9lACw_8PNREPLuvYD2SjzkmPElMwQsmjtfY1_zUntxpkdk&click=8fc17ba4-887f-4ffb-9cd3-fd8ae2bf9c3c&hsutk=03eee9e05de4607ac02e38057d258fab&utm_referrer=https%3A%2F%2Fwww.google.com%2F&pageId=5249223210\"  target=\"_blank\"  cta_dest_link=\"https://www.captaincontrat.com/document/cgv-ecommerce-en-ligne\"><img id=\"hs-cta-img-0d5390dd-1adf-4cd2-9c94-c3b8287a46a2\" class=\"hs-cta-img \" style=\"border-width: 0px; /*hs-extra-styles*/\" mce_noresize=\"1\" alt=\"Rédigez vos CGV e-commerce personnalisées en quelques clics J&#39;obtiens mes CGV\" src=\"http://cdn2.hubspot.net/hubshot/17/08/08/7a9e0e6e-0834-47a5-baaf-1ed3e8732457.png\" srcset=\"https://cdn2.hubspot.net/hubshot/18/04/26/2bcb515c-d740-4e59-a282-f1aaaa51dfcb.png 4x, https://cdn2.hubspot.net/hubshot/18/04/26/99fa7630-7142-4340-a0b2-5dce0e7245ba.png 3x, https://cdn2.hubspot.net/hubshot/18/04/26/9e2da7b0-2394-4ced-a623-8f8b7dd06430.png 2x\"/></a>","is_image":false,"placement_element_class":"hs-cta-0d5390dd-1adf-4cd2-9c94-c3b8287a46a2","raw_html":"<a id=\"cta_button_2458562_3d96c6e5-15bd-49f7-83b9-be8428a15e37\" class=\"cta_button \" href=\"/cs/c/?cta_guid=3d96c6e5-15bd-49f7-83b9-be8428a15e37&placement_guid=0d5390dd-1adf-4cd2-9c94-c3b8287a46a2&portal_id=2458562&canon=https%3A%2F%2Fwww.captaincontrat.com%2Farticles-droit-commercial%2Fdifference-cgv-cgu&redirect_url=APefjpF123zkhaaLFIeSZihSr0R70d7J9pzJ_66eRfQqSaCBddf0G9DqvHCWG-p0AFKhNuAs_XSBTVoWk8cRrEfsyecN5juFtN9HAFxDHS12FrZj-DKZCiIcp_5EYn4kZnTpNYR4dK10W_nFgQyTD1ndfbjvI6hl5DoqYdoOmH9wpO95Xl0Zb12Jz1RgBpvLiI-D2aSkZ9ZizlDOlQsRrMvj7U7jFRW5ktcQgfGGQyZJqGZq5i6DzepfGTGGJo570s3xH3TTS9lACw_8PNREPLuvYD2SjzkmPElMwQsmjtfY1_zUntxpkdk&click=8fc17ba4-887f-4ffb-9cd3-fd8ae2bf9c3c&hsutk=03eee9e05de4607ac02e38057d258fab&utm_referrer=https%3A%2F%2Fwww.google.com%2F&pageId=5249223210\" target=\"_blank\" style=\"/*hs-extra-styles*/\" cta_dest_link=\"https://www.captaincontrat.com/document/cgv-ecommerce-en-ligne\" title=\"Rédigez vos CGV e-commerce personnalisées en quelques clics J&#39;obtiens mes CGV\"><div class=\"custom_newCTA\">\n<div class=\"txt\">R&eacute;digez vos CGV e-commerce personnalis&eacute;es en quelques clics</div>\n<div class=\"button\">J'obtiens mes CGV</div>\n</div></a>"};
+    var __hs_cta = {};
+
+    __hs_cta.drop = function() {
+        var is_legacy = document.getElementById('hs-cta-ie-element') && true || false,
+            html = __hs_cta_json.image_html,
+            tags = __hs_cta.getTags(),
+            is_image = __hs_cta_json.is_image,
+            parent, _style;
+
+        if (!is_legacy && !is_image) {
+            parent = (document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]);
+
+            _style = document.createElement('style');
+            parent.insertBefore(_style, parent.childNodes[0]);
+            try {
+                default_css = ".hs-cta-wrapper p, .hs-cta-wrapper div { margin: 0; padding: 0; }";
+                cta_css = default_css + " " + __hs_cta_json.css;
+                // http://blog.coderlab.us/2005/09/22/using-the-innertext-property-with-firefox/
+                _style[document.all ? 'innerText' : 'textContent'] = cta_css;
+            } catch (e) {
+                // addressing an ie9 issue
+                _style.styleSheet.cssText = cta_css;
+            }
+
+            html = __hs_cta_json.raw_html;
+
+            
+
+        }
+
+        for (var i = 0; i < tags.length; ++i) {
+
+            var tag = tags[i];
+            var images = tag.getElementsByTagName('img');
+            var cssText = "";
+            var align = "";
+            for (var j = 0; j < images.length; j++) {
+                align = images[j].align;
+                images[j].style.border = '';
+                images[j].style.display = '';
+                cssText = images[j].style.cssText;
+            }
+
+            if (align == "right") {
+                tag.style.display = "block";
+                tag.style.textAlign = "right";
+            } else if (align == "middle") {
+                tag.style.display = "block";
+                tag.style.textAlign = "center";
+            }
+
+            tag.innerHTML = html.replace('/*hs-extra-styles*/', cssText);
+            tag.style.visibility = 'visible';
+            tag.setAttribute('data-hs-drop', 'true');
+            window.hbspt && hbspt.cta && hbspt.cta.afterLoad && hbspt.cta.afterLoad('0d5390dd-1adf-4cd2-9c94-c3b8287a46a2');
+        }
+
+        return tags;
+    };
+
+    __hs_cta.getTags = function() {
+        var allTags, check, i, divTags, spanTags,
+            tags = [];
+            if (document.getElementsByClassName) {
+                allTags = document.getElementsByClassName(__hs_cta_json.placement_element_class);
+                check = function(ele) {
+                    return (ele.nodeName == 'DIV' || ele.nodeName == 'SPAN') && (!ele.getAttribute('data-hs-drop'));
+                };
+            } else {
+                allTags = [];
+                divTags = document.getElementsByTagName("div");
+                spanTags = document.getElementsByTagName("span");
+                for (i = 0; i < spanTags.length; i++) {
+                    allTags.push(spanTags[i]);
+                }
+                for (i = 0; i < divTags.length; i++) {
+                    allTags.push(divTags[i]);
+                }
+
+                check = function(ele) {
+                    return (ele.className.indexOf(__hs_cta_json.placement_element_class) > -1) && (!ele.getAttribute('data-hs-drop'));
+                };
+            }
+            for (i = 0; i < allTags.length; ++i) {
+                if (check(allTags[i])) {
+                    tags.push(allTags[i]);
+                }
+            }
+        return tags;
+    };
+
+    // need to do a slight timeout so IE has time to react
+    setTimeout(__hs_cta.drop, 10);
+    
+    window._hsq = window._hsq || [];
+    window._hsq.push(['trackCtaView', '0d5390dd-1adf-4cd2-9c94-c3b8287a46a2', '3d96c6e5-15bd-49f7-83b9-be8428a15e37']);
+    
+
+}());

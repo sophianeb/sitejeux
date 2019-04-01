@@ -46,16 +46,16 @@
 								<ul class="sub_menu">
 									<li><a href="index.html">Console</a>
 										<ul class="sub_menu">
-											<li><a href="index.php?page=jeuxPS4"><img src="./public/images/icons/ps4_logo.png" style="width:50px; height:40px;">Playstion 4</a></li>
-											<li><a href="index.php?page=jeuxXBOX"><img src="./public/images/icons/xboxone_logo.png" style="width:50px; height:40px;">Xbox One</a></li>
+											<li><a href="index.php?page=pagejeux&amp;platforme=jeuxps4"><img src="./public/images/icons/ps4_logo.png" style="width:50px; height:40px;">Playstion 4</a></li>
+											<li><a href="index.php?page=pagejeux&amp;platforme=jeuxxbox"><img src="./public/images/icons/xboxone_logo.png" style="width:50px; height:40px;">Xbox One</a></li>
 											
 										</ul>
 							</li>
 									<li><a href="#">PC</a>
 										<ul class="sub_menu">
-												<li><a href="index.php?page=jeuxOrigine"><img src="./public/images/icons/origine_logo.png" style="width:50px; height:40px;">Origine</a></li>
-												<li><a href="index.php?page=jeuxSteam"><img src="./public/images/icons/steam_logo.png" style="width:50px; height:40px;">Steam</a></li>
-												<li><a href="index.php?page=jeuxuplay"><img src="./public/images/icons/uplay_logo.jpg" style="width:50px; height:40px;">Uplay</a></li>
+												<li><a href="index.php?page=pagejeux&amp;platforme=jeuxea"><img src="./public/images/icons/origine_logo.png" style="width:50px; height:40px;">Origine</a></li>
+												<li><a href="index.php?page=pagejeux&amp;platforme=jeuxsteam"><img src="./public/images/icons/steam_logo.png" style="width:50px; height:40px;">Steam</a></li>
+												<li><a href="index.php?page=pagejeux&amp;platforme=jeuxuplay"><img src="./public/images/icons/uplay_logo.jpg" style="width:50px; height:40px;">Uplay</a></li>
 										</ul>
 									</li>
 									<li><a href="home-03.html">Accessoire</a></li>
@@ -80,6 +80,13 @@
 						</ul>
 					</nav>
 				</div>
+				<div class="search-product pos-relative bo4 of-hidden">
+							<input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
+
+							<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+								<i class="fs-12 fa fa-search" aria-hidden="true"></i>
+							</button>
+						</div>
 
 				<!-- Header Icon -->
 				<div class="header-icons">
@@ -114,7 +121,16 @@
 										</a>
 
 									</div>
+									
 								</li>
+								<li class="header-cart-item">
+								<div class="header-cart-item-txt">
+										<a href="index.php?page=mescommande" class="header-cart-item-name">
+											Mes commande
+										</a>
+
+									</div>
+									</li>
 
 								<li class="header-cart-item">
 									
@@ -131,11 +147,13 @@
 						
 
 									<?php }else
-									{ ?><!-- Button -->
+									{ 
+										?>
+									</div>	<!-- Button -->
 									<a href="index.php?page=login" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Connexion
 									</a>
-								</div>
+								
 									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Inscription
 									</a>
@@ -146,15 +164,172 @@
             ?>
 
 								
+									<!-- Button -->					
+	</div>
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<img src="./template/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								
+<?php $lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_panier, quantite_panier_utilisateur, image_article_panier',[0=>0], ' ');
+$total=0;
+foreach ($lire2 as $uneligne ) {
+	
+	echo '<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="./public/'.$uneligne->image_article_panier.'" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											'.$uneligne->nom_article_panier.'
+										</a>
+
+										<span class="header-cart-item-info">
+											'.$uneligne->prix_article_panier.'€
+										</span>
+										<span class="header-cart-item-info">
+											x'.$uneligne->quantite_panier_utilisateur.'
+										</span>
+									</div>
+								</li>';
+								$total= $total + ($uneligne->prix_article_panier * $uneligne->quantite_panier_utilisateur);
+								
+ 	# code...
+ } ?>
+									
+									
+							</ul>
+
+							<div class="header-cart-total">
+								Total:<?= $total ?>€ 
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="index.php?page=pagepanier" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
 									<!-- Button -->
 									
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Check Out
+									</a>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+				<!-- -->
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="./index.php" class="logo-mobile">
+				<img src="./public/images/icons/logosite1.png" alt="IMG-LOGO">
+			</a>
+			<div class="search-product pos-relative bo4 of-hidden">
+							<input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
+
+							<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+								<i class="fs-12 fa fa-search" aria-hidden="true"></i>
+							</button>
+						</div>
+
+
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					
+					<div class="header-wrapicon2">
+						<?php if(isset($_SESSION['c_email']) && ($_SESSION['image_user'] != '')){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="tailleimageP roundedImage header-icon1 js-show-header-dropdown" alt="ICON"> 
+						<?php }
+						else{ ?>
+						<img src="./public/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+					<?php } ?>
+						<div class="header-cart header-dropdown">
+							
+							<ul class="header-cart-wrapitem">
 								
-						
+						<div class="header-cart-wrapbtn">
+									
+
+						<!-- Header cart noti -->
+						<?php if (isset($_SESSION['c_email']))
+									{ 
+               
+                ?>
+
+						<!-- Header cart noti -->
 						
 							
+								<li class="header-cart-item">
+									
+
+									<div class="header-cart-item-txt">
+										<a href="index.php?page=profil" class="header-cart-item-name">
+											Mon compte
+										</a>
+
+									</div>
+									
+								</li>
+								<li class="header-cart-item">
+								<div class="header-cart-item-txt">
+										<a href="index.php?page=mescommande" class="header-cart-item-name">
+											Mes commande
+										</a>
+
+									</div>
+									</li>
+
+								<li class="header-cart-item">
+									
+
+									<div class="header-cart-item-txt">
+										<a href="index.php?page=deconnexion" class="header-cart-item-name">
+											Deconnexion
+										</a>
+
+									</div>
+								</li>
+							</div>
+						</div>
 						
-					</div>
-					<span class="linedivide1"></span>
+
+									<?php }else
+									{ 
+										?>
+									</div>	<!-- Button -->
+									<a href="index.php?page=login" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Connexion
+									</a>
+								
+									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Inscription
+									</a>
+				</div>
+									<?php
+                
+            }
+            ?>
+
+</div>
+<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
 						<img src="./template/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
@@ -215,140 +390,6 @@ foreach ($lire2 as $uneligne ) {
 						</div>
 					
 					</div>
-				<!-- -->
-				</div>
-			</div>
-		</div>
-
-		<!-- Header Mobile -->
-		<div class="wrap_header_mobile">
-			<!-- Logo moblie -->
-			<a href="./index.php" class="logo-mobile">
-				<img src="./public/images/icons/logosite.png" alt="IMG-LOGO">
-			</a>
-
-			<!-- Button show menu -->
-			<div class="btn-show-menu">
-				<!-- Header Icon mobile -->
-				<div class="header-icons-mobile">
-					
-
-					<span class="linedivide2"></span>
-
-					<div class="header-wrapicon2">
-						<img src="./template/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						
-
-						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-						<form class="leave-comment">
-						Nom
-						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Nom">
-						</div>
-
-						Mot de passe
-						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="phone-number" placeholder="Mot de passe">
-						</div>
-						</form>
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="vue/test.php" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Connexion
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									
-									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Inscription
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="header-wrapicon2">
-					<img src="./template/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="./template/images/icons/item-cart-01.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="./template/images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="./template/images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
-							</ul>
-
-							<div class="header-cart-total">
-								Total: $75.00
-							</div>
-
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Cart
-									</a>
-								</div>
-
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
-								</div>
-							</div>
-						</div>
-					
-</div>
-</div>
 		
 
 				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
@@ -363,24 +404,15 @@ foreach ($lire2 as $uneligne ) {
 		<div class="wrap-side-menu" >
 			<nav class="side-menu">
 				<ul class="main-menu">
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-					</li>
+					
 
 					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 						<div class="topbar-child2-mobile">
 							<span class="topbar-email">
-								fashe@example.com
+								contact@kingg.com
 							</span>
 
-							<div class="topbar-language rs1-select2">
-								<select class="selection-1" name="time">
-									<option>USD</option>
-									<option>EUR</option>
-								</select>
-							</div>
+							
 						</div>
 					</li>
 
