@@ -1,4 +1,4 @@
-<?php include("./controleur/c_connexion.php"); ?> 
+
 <div class="container-menu-header">
 			<div class="topbar">
 				<div class="topbar-social">
@@ -136,10 +136,12 @@
 									
 
 									<div class="header-cart-item-txt">
-										<a href="index.php?page=deconnexion" class="header-cart-item-name">
-											Deconnexion
-										</a>
-
+										<form type="POST" name="deco">
+										<input type="" hidden="hidden" name="decoinput" value="1">
+										<button type="submit" class="header-cart-item-name"  name="deco">
+											Deconnexion</button>
+										
+										</form>
 									</div>
 								</li>
 							</div>
@@ -149,14 +151,36 @@
 									<?php }else
 									{ 
 										?>
-									</div>	<!-- Button -->
-									<a href="index.php?page=login" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Connexion
-									</a>
-								
-									<a href="index.php?page=inscription" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+
+									</div>
+									<form class="leave-comment"method="POST" id="fconnexion" name="fconnexion">
+						
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="email" name="c_email" placeholder="mmm@mm.com" required>
+						</div>
+
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="password" name="c_password" placeholder="Mot de passe" required>
+						</div>
+
+
+						
+							
+							<!-- Button -->
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+							<button value="LOGIN" type="submit" name="fconnexion" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+								Connexion
+							</button>
+						</div>
+						<div class="header-cart-wrapbtn">
+							<a href="index.php?page=inscription" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
 										Inscription
 									</a>
+								</div>
+						</div>	<!-- Button -->
+									
+									
 				</div>
 									<?php
                 
@@ -175,7 +199,7 @@
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
-								
+			<?php if(isset($_SESSION['c_email'])){ ?>					
 <?php $lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_panier, quantite_panier_utilisateur, image_article_panier',[0=>0], ' ');
 $total=0;
 foreach ($lire2 as $uneligne ) {
@@ -209,7 +233,7 @@ foreach ($lire2 as $uneligne ) {
 							<div class="header-cart-total">
 								Total:<?= $total ?>€ 
 							</div>
-
+<?php }else{ }?>
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
@@ -301,9 +325,12 @@ foreach ($lire2 as $uneligne ) {
 									
 
 									<div class="header-cart-item-txt">
-										<a href="index.php?page=deconnexion" class="header-cart-item-name">
-											Deconnexion
+										<form type="POST" name="deco">
+										<input type="" hidden="hidden" name="decoinput">
+										<button type="submit" class="header-cart-item-name" name="deco">
+											Deconnexion</button>
 										</a>
+										</form>
 
 									</div>
 								</li>

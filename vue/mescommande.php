@@ -1,4 +1,3 @@
-<
 
 <div class="container-table-cart pos-relative">
 				<div class="wrap-table-shopping-cart bgwhite">
@@ -16,7 +15,7 @@
 $connexion = BDDConnexionPDO();
 $total = 0;
 
-$lire3 = read($connexion,'historiquecommande','*', ['id_user'=>$_SESSION['iduser']]);
+$lire3 = read($connexion,'historiquecommande','*', ['id_user'=>$_SESSION['iduser']],'');
 
 
 

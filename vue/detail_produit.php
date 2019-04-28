@@ -2,7 +2,7 @@
 $connexion = BDDConnexionPDO();
 
 $lire1='';
-$lire1=read($connexion,'jeux','*',['ref_jeux'=> $_REQUEST['ref']]);
+$lire1=read($connexion,'jeux','*',['ref_jeux'=> $_REQUEST['ref']],'');
 	$_var = 'aj_panier';
 							
 	foreach ($lire1 as $uneligne) {
@@ -12,7 +12,9 @@ $solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux
 								$_SESSION['solde']=$solde;
 						$nom1 = $uneligne->nom_jeux;
 						$prix = $uneligne->prix_jeux; 
+						
 			?>
+
 
 	
 	<div class="container bgwhite p-t-35 p-b-80">
@@ -67,9 +69,9 @@ $solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux
 								<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
 									<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
 								</button>
-
+								<form type="POST" name="nbprod">
 								<input class="size8 m-text18 t-center num-product" type="number" name="num-product" value="1">
-
+								</form>
 								<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
 									<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
 								</button>
@@ -113,9 +115,15 @@ $solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux
 					</h5>
 
 					<div class="dropdown-content dis-none p-t-15 p-b-23">
-						<p class="s-text8">
-							Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat
-						</p>
+						
+		<div class="rating"><!--
+   --><a href="#5" title="Donner 5 étoiles">☆</a><!--
+   --><a href="#4" title="Donner 4 étoiles">☆</a><!--
+   --><a href="#3" title="Donner 3 étoiles">☆</a><!--
+   --><a href="#2" title="Donner 2 étoiles">☆</a><!--
+   --><a href="#1" title="Donner 1 étoile">☆</a>
+</div><p class="s-text8"></p>
+						
 					</div>
 				</div>
 			</div>

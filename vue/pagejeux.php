@@ -12,7 +12,7 @@ $lire1=read($connexion,'jeux','*',['platforme_jeux'=>'ps4'],'ORDER BY prix_vente
 		break;
 		case 'jeuxxbox':
 
-	$lienimg= 'steam_info2.jpg';
+	$lienimg= 'xbox_info2.jpg';
 	$lire1='';
 $var = 'desc';
 
