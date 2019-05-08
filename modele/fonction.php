@@ -60,10 +60,11 @@ function create($connexion, $table, $items=[]) {
 
   
   $sql ="INSERT INTO $table ($head) VALUES ($temp)"; 
-
+var_dump($sql);
+die();
   $resultat = $connexion->prepare($sql);
   $resultat->execute($data);
-  var_dump($sql);
+  
   if ($resultat== true)
   {
     $resultat->closeCursor();
@@ -91,9 +92,8 @@ return $util->fetchall();
 
 
 
-
-
 }
+
 function update($connexion, $table, $items=[], $ref=[]) {
 
   $head = "";

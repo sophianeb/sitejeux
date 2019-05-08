@@ -6,49 +6,67 @@ if(isset($_POST['fconnexion']))
 if(isset($_POST['c_email']) && isset($_POST['c_password']))
 {
     // connexion à la base de données
-    $db_username = '2017-kingg';
+/*    $db_username = '2017-kingg';
     $db_password = '123456';
     $db_name     = '2017-kingg_bdd';
-    $db_host     = '192.168.1.17';
-    $port='21017';
-    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name,$port)
-           or die('could not connect to database');
+    $db_host     = '192.168.1.17:21017';
+    $port='';
+    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
+           or die('could not connect to database');*/
     $id='';
+    $prenom='';
+    $nom='';
+    $image='';
+    $adresse='';
+    $numtel='';
+    $ville='';
+    $money='';
+    $username1='';
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
-    $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['c_email'])); 
-    $password = mysqli_real_escape_string($db,htmlspecialchars($_POST['c_password']));
+    $username = htmlspecialchars($_POST['c_email']); 
+    $password = md5(htmlspecialchars($_POST['c_password']));
     
     if($username !== "" && $password !== "")
     {
+      $lire2 = read($connexion,'utilisateur','*',['mail_user'=>$username, 'mdp_user'=>$password],'');
          $requete2 = "SELECT * FROM utilisateur where 
               mail_user = '".$username."' and mdp_user = '".$password."' ";
-
-        $exec_requete2 = mysqli_query($db,$requete2);
-        $reponse2 = mysqli_fetch_array($exec_requete2);
         
+        
+        $lire1 = read($connexion,'utilisateur', 'count(*)',['mail_user'=>$username, 'mdp_user'=>$password],'');
         $requete = "SELECT count(*) FROM utilisateur where 
               mail_user = '".$username."' and mdp_user = '".$password."' ";
 
-        $exec_requete = mysqli_query($db,$requete);
-        $reponse = mysqli_fetch_array($exec_requete);
-
-       $id = $reponse2['id_user'];
-       $image = $reponse2['image'];
-       $nom = $reponse2['nom_user'];
-       $prenom = $reponse2['prenom_user'];
-       $adresse = $reponse2['adresse_user'];
-       $numtel = $reponse2['numT_user'];
-       $ville = $reponse2['ville_user'];
-       $money = $reponse2['money_user'];
+$lecture = json_encode($lire1);
+var_dump($nom);
+foreach ($lire2 as $unlire2 ) {
+ 
+       $id = $unlire2->id_user;
+       $nom = $unlire2->nom_user;
+       $prenom = $unlire2->prenom_user;
+       $username1 = $unlire2->mail_user;
+       $adresse = $unlire2->adresse_user;
+       $numtel = $unlire2->numT_user;
+       $ville = $unlire2->ville_user;
+       $image = $unlire2->image;
+       
+       
+       
+       
+       
+       $money = $unlire2->money_user;
+}
       
-        $count = $reponse['count(*)'];
+      
+        $count = $lire1[0];
+
         
         
         if($count=1) // nom d'utilisateur et mot de passe correctes
         { 
            $_SESSION['iduser'] = $id;
-           $_SESSION['c_email'] = $username;
+           $_SESSION['c_email'] = $username1;
            $_SESSION['nom'] = $nom;
            $_SESSION['image_user'] = $image;
            $_SESSION['prenom'] = $prenom;
@@ -56,37 +74,24 @@ if(isset($_POST['c_email']) && isset($_POST['c_password']))
            $_SESSION['numtel'] = $numtel;
            $_SESSION['ville'] = $ville;
            $_SESSION['money'] = $money;
-           
-           
-           
 
-           
            header('Location: index.php?page=accueil');
-           die();
+           exit;
+          
         }
-        else
-        {
-           header('Location: index.php?page=login&erreur=1');
-           die(); // utilisateur ou mot de passe incorrect
+        else {
+          # code...
+        
+        
+           header('Location: index.php?page=connexion&erreur=1');
+           exit;
+          // utilisateur ou mot de passe incorrect
         }
     }
-    else
-    {
-       header('Location: index.php?page=login&erreur=2');
-       die(); // utilisateur ou mot de passe vide
-    }
+   
 }
-else
-{
-
 
 }
-}
- if(isset($_POST['decoinput']))
- {
-  session_destroy();
-  header('Location: index.php?page=accueil');
-           die();
- }
+
  include('./vue/menu.php'); 
 ?>

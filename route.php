@@ -35,8 +35,8 @@
                   case 'pagejeux':
                     include("./vue/pagejeux.php");
                   break;
-                  case 'jeuxXBOX':
-                    include("./vue/j_xbox.php");
+                  case 'pagesolde':
+                    include("./vue/page_solde.php");
                   break;
                   case 'jeuxSteam':
                     include("./vue/j_steam.php");

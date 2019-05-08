@@ -1,4 +1,6 @@
-<?php if (isset($_FILES['fichier'])) 
+<?php 
+
+if (isset($_FILES['fichier'])) 
         {
             if( $_FILES['fichier']['name'] != '')
                 {       
@@ -11,7 +13,7 @@
                     //Début des vérifications de sécurité...
                     if (!in_array($extension, $extensions)) //Si l'extension n'est pas dans le tableau
                         {
-                         $alert2 = message("danger", "<strong>Erreur! </strong>Vous devez uploader un fichier de type pdf");
+                         $alert2 = message("danger", "<strong>Erreur! </strong>Vous devez uploader un fichier de type jpg");
                           $erreur = true;
                         }
                     if ($taille>$taille_maxi)

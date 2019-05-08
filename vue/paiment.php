@@ -13,7 +13,7 @@ foreach ($lire1 as $uneligne ) {
 }
 foreach ($lire2 as $uneligne2 ) {
 
-		$resultat = create($connexion,'historiquecommande',['id_user'=>$id, 'nom_article_hist'=>$uneligne2->nom_article_panier, 'prix_article_hist'=>$uneligne2->prix_article_panier, 'cle_jeux'=> $cle, 'image_article_hist'=> $uneligne2->image_article_panier, 'quantite_commande_hist'=>$uneligne2->quantite_commande_panier]);
+		$resultat = create($connexion,'historiquecommande',['id_user'=>$id, 'nom_article_hist'=>$uneligne2->nom_article_panier, 'prix_article_hist'=>$uneligne2->prix_article_panier, 'cle_jeux'=> $cle, 'image_article_hist'=> $uneligne2->image_article_panier, 'quantite_commande_hist'=>$uneligne2->quantite_commande_panier],' ');
 
                
 }

@@ -1,30 +1,6 @@
 
 <div class="container-menu-header">
-			<div class="topbar">
-				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-				</div>
-
-				<span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
-
-				<div class="topbar-child2">
-					<span class="topbar-email">
-					</span>
-
-					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
-						</select>
-					</div>
-				</div>
-			</div>
+			
 
 			<div class="wrap_header">
 				<!-- Logo -->
@@ -37,12 +13,12 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="index.php">Home</a>
+								<a href="index.php">Accueil</a>
 								
 							</li>
 
 							<li>
-								<a href="index.php?page=liste_articles">Magazin</a>
+								Magazin
 								<ul class="sub_menu">
 									<li><a href="index.html">Console</a>
 										<ul class="sub_menu">
@@ -63,11 +39,7 @@
 							</li>
 
 							<li class="sale-noti">
-								<a href="product.html">Soldes</a>
-							</li>
-
-							<li>
-								<a href="blog.html">Blog</a>
+								<a href="index.php?page=pagesolde">Soldes</a>
 							</li>
 
 							<li>
@@ -80,19 +52,16 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="search-product pos-relative bo4 of-hidden">
-							<input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
-
-							<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-								<i class="fs-12 fa fa-search" aria-hidden="true"></i>
-							</button>
-						</div>
+				
 
 				<!-- Header Icon -->
 				<div class="header-icons">
 					<div class="header-wrapicon2">
-						<?php if(isset($_SESSION['c_email']) && ($_SESSION['image_user'] != '')){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class="tailleimageP roundedImage header-icon1 js-show-header-dropdown" alt="ICON"> 
-						<?php }
+						<?php if(isset($_SESSION['c_email']) && ($_SESSION['image_user'] != '')){ ?><img src="./public/imageuser/<?= $_SESSION['image_user']  ?>" class=" header-icon1 js-show-header-dropdown" alt="ICON"> 
+						<?php
+// pour image class -> roundedImage
+
+						 }
 						else{ ?>
 						<img src="./public/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 					<?php } ?>
@@ -104,7 +73,7 @@
 									
 
 						<!-- Header cart noti -->
-						<?php if (isset($_SESSION['c_email']))
+						<?php if (isset($_SESSION['c_email']) && $_SESSION['c_email'] != '' )
 									{ 
                
                 ?>
@@ -136,12 +105,10 @@
 									
 
 									<div class="header-cart-item-txt">
-										<form type="POST" name="deco">
-										<input type="" hidden="hidden" name="decoinput" value="1">
-										<button type="submit" class="header-cart-item-name"  name="deco">
-											Deconnexion</button>
+										<a href="index.php?page=deconnexion">Deconnexion</a>
+											
 										
-										</form>
+										
 									</div>
 								</li>
 							</div>
@@ -264,13 +231,7 @@ foreach ($lire2 as $uneligne ) {
 			<a href="./index.php" class="logo-mobile">
 				<img src="./public/images/icons/logosite1.png" alt="IMG-LOGO">
 			</a>
-			<div class="search-product pos-relative bo4 of-hidden">
-							<input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
-
-							<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-								<i class="fs-12 fa fa-search" aria-hidden="true"></i>
-							</button>
-						</div>
+			
 
 
 

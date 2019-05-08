@@ -12,7 +12,18 @@ $solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux
 								$_SESSION['solde']=$solde;
 						$nom1 = $uneligne->nom_jeux;
 						$prix = $uneligne->prix_jeux; 
-						
+				
+if(isset($_POST['envoicomment'])){
+if(isset($GET['titrecomment']) && isset($GET['messagecomment']))
+{
+	create($connexion,'commentaire',['id_commetaire'=>$_GET['titrecomment'],'contenu_commentaire'=>$_GET['messagecomment'], 'id_user'=>$_SESSION['id']]);
+}
+else
+{
+	echo "NON";
+	die();
+
+}}		
 			?>
 
 
@@ -69,7 +80,7 @@ $solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux
 								<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
 									<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
 								</button>
-								<form type="POST" name="nbprod">
+								<form type="POST" name="nbprod" >
 								<input class="size8 m-text18 t-center num-product" type="number" name="num-product" value="1">
 								</form>
 								<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
@@ -84,7 +95,7 @@ $solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux
 								</button>
 							</div>
 						</div>
-					</div>
+					</div> 
 				</div>
 
 				<div class="p-b-45">
@@ -115,9 +126,19 @@ $solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux
 					</h5>
 
 					<div class="dropdown-content dis-none p-t-15 p-b-23">
-						
+					<form type="POST" name="envoicomment" id="envoicomment">
+					<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="titrecomment" placeholder="Titre">
+						</div>
+
+						<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="messagecomment" placeholder="Commentaire"></textarea>
+						<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" type="submit" id="envoicomment" name="envoicomment">
+								Envoyer
+							</button>	
+					
+					
 		<div class="rating"><!--
-   --><a href="#5" title="Donner 5 étoiles">☆</a><!--
+   --><a href="&star=5" title="Donner 5 étoiles">☆</a><!--
    --><a href="#4" title="Donner 4 étoiles">☆</a><!--
    --><a href="#3" title="Donner 3 étoiles">☆</a><!--
    --><a href="#2" title="Donner 2 étoiles">☆</a><!--

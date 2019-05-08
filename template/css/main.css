@@ -638,7 +638,7 @@ iframe {
 }
 
 .logo img {
-  max-height: 27px;
+  
 }
 
 
@@ -2368,6 +2368,9 @@ input.num-product::-webkit-inner-spin-button {
 .rating a:focus ~ a {
    color: orange;
    cursor: pointer;
+}
+.remonte {
+  top: -100px; 
 }
 
 
