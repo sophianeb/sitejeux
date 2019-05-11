@@ -14,17 +14,15 @@
                     include("./vue/accueil.php");
                   break;
                   case 'mescommande':
-                    include("./vue/mescommande.php");
+                    include("./controleur/c_mescommandes.php");
                   break;
                   
-                  case 'liste_articles':
-                    include("./vue/liste_articles.php");
-                  break;
+                 
                   case 'contact':
                     include("./vue/contact.php");
                   break;
                   case 'inscription':
-                    include("./vue/inscription.php");
+                    include("./controleur/c_inscription.php");
                   break;
                   case 'deconnexion':
                     include("./vue/deconnexion.php");
@@ -38,15 +36,9 @@
                   case 'pagesolde':
                     include("./vue/page_solde.php");
                   break;
-                  case 'jeuxSteam':
-                    include("./vue/j_steam.php");
-                  break;
-                  case 'jeuxOrigine':
-                    include("./vue/j_origine.php");
-                  break;
-                  case 'jeuxUplay':
-                    include("./vue/j_uplay.php");
-                  break;
+                  
+                  
+                  
                   case 'pageproduit':
                     include("./vue/detail_produit.php");
                   break;
@@ -55,6 +47,13 @@
                   break;
                   case 'pagepaiment':
                     include("./vue/paiment.php");
+                  break;
+
+                   case 'pdfcom':
+                    include("./controleur/c_PDFCom.php");
+                  break;
+                    case 'message':
+                    include("./vue/message.php");
                   break;
 
                  

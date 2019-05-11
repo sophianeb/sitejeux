@@ -55,14 +55,14 @@ $lire1=read($connexion,'jeux','*',['platforme_jeux'=>'ea'],'ORDER BY prix_vente_
 		echo 'erreur';
 		break;
 }
-$lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_panier, image_article_panier, ref_commande',[1=>1],' ');
+$lire2=read($connexion,'panier_utilisateurs','*',[1=>1],' ');
 
 
 
 
 
 
-
+$s ='';
 
  ?>
 <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(./public/images/imageinfo/<?= $lienimg ?>);">
@@ -135,7 +135,8 @@ $lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_p
 								$solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux*100;
 								$_SESSION['solde']=$solde;
 						$nom1 = $uneligne->nom_jeux;
-						$prix = $uneligne->prix_jeux;
+						$prix = $uneligne->prix_vente_jeux;
+						$platforme = $uneligne->platforme_jeux;
 								echo'<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
 							<div class="block2">
@@ -166,7 +167,8 @@ $lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_p
 									</a>
 
 									<span class="block2-price m-text6 p-r-5">
-										'.$uneligne->prix_vente_jeux.'€ '.$solde.'%
+										'.round($uneligne->prix_vente_jeux,2,PHP_ROUND_HALF_UP).'€ '.round($solde,2,PHP_ROUND_HALF_UP).'%
+
 									</span>
 								</div>
 							</div>
@@ -180,20 +182,23 @@ $lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_p
 	$_tabpanier = 
 	['nom_article_panier'=>$nom1,
 	'prix_article_panier'=>$prix,
+	'platforme_jeux_panier'=>$platforme,
 	'image_article_panier'=>$image1
 	];
 
 	var_dump($_tabpanier);
 		foreach ($lire2 as $uneligne2) {
 			$s = $uneligne2->nom_article_panier;
+			$l = $uneligne2->platforme_jeux_panier;
 			
 
 			# code...
 		}
-		if( $s != $uneligne->nom_jeux)
+		if( $s != $uneligne->nom_jeux || $l != $uneligne->platforme_jeux)
 				{ 
 					$addpanier = create($connexion,'panier_utilisateurs',$_tabpanier); 
-		} else 
+		} 
+		else 
 		 {
 			$modifpanier = update($connexion,'panier_utilisateurs',['quantite_panier_utilisateur'=> 'quantite_panier_utilisateur +1'],['nom_article_panier'=>$uneligne->nom_jeux]);
 		} 

@@ -1,5 +1,5 @@
 <?php
-include("./controleur/c_inscription.php")
+
 ?>
 
 <section class="bgwhite p-t-66 p-b-60">
@@ -10,7 +10,7 @@ include("./controleur/c_inscription.php")
 				</div>
 
 				<div class="col-md-6 p-b-30">
-					<form class="leave-comment" action = "index.php?page=accueil" method="post" id= inscri enctype="multipart/form-data">
+					<form class="leave-comment" action = "index.php?page=inscription" name ="envoi11" method="POST" id= "inscri" enctype="multipart/form-data">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Nouveau client ?
 						</h4>
@@ -37,7 +37,7 @@ include("./controleur/c_inscription.php")
 							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="i_ville" id="i_ville" placeholder="Ville">
 						</div>
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="tel" name="i_numT" id="i_numT" placeholder="Numéro de téléphone">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="tel" name="i_num" id="i_num" placeholder="Numéro de téléphone">
 						</div>
 						
 
@@ -45,7 +45,7 @@ include("./controleur/c_inscription.php")
 
 						<div class="w-size25">
 							<!-- Button -->
-							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" type="submit" id= inscri name=envoi>
+							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" type="submit"  name=envoi11>
 								S'inscrire
 							</button>
 						</div>

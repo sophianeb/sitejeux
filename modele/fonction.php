@@ -60,8 +60,8 @@ function create($connexion, $table, $items=[]) {
 
   
   $sql ="INSERT INTO $table ($head) VALUES ($temp)"; 
-var_dump($sql);
-die();
+
+
   $resultat = $connexion->prepare($sql);
   $resultat->execute($data);
   
@@ -75,23 +75,19 @@ die();
 
   
 }
-function read($connexion, $table, $items,$ref=[1=>1], $autre)
+function read($connexion, $table, $items,$ref=[1=>1],$autre)
 {
-  $autre='';
   $condition = '';
 
 foreach ($ref as $key => $value) {
       $condition = $key." IN ('".$value."')";
     }
-$sql= " SELECT $items FROM $table $autre where $condition " ;
+$sql= " SELECT $items FROM $table where $condition";
 $util=$connexion->prepare($sql);
+
 $util->execute();
 $util->setFetchMode(PDO::FETCH_OBJ);
-//var_dump($sql);
 return $util->fetchall();
-
-
-
 }
 
 function update($connexion, $table, $items=[], $ref=[]) {
@@ -112,7 +108,7 @@ function update($connexion, $table, $items=[], $ref=[]) {
   }
   
   $sql ="UPDATE $table SET $head WHERE $condition"; 
-   var_dump($sql);
+   
 
   
  

@@ -2,9 +2,9 @@
 
 $lire1='';
 $var = 'desc';
-
+$s='';
 $lire1=read($connexion,'jeux','*',[1=>1],'ORDER BY prix_vente_jeux asc');
-$lire2=read($connexion,'panier_utilisateurs','nom_article_panier, prix_article_panier, image_article_panier, ref_commande',[1=>1],' ');
+$lire2=read($connexion,'panier_utilisateurs','*',[1=>1],' ');
 if(isset($_POST['filtre'])){
 if($_POST['filtre'] == 'pertinant')
 {
@@ -91,7 +91,8 @@ else
 								$solde=($uneligne->prix_vente_jeux - $uneligne->prix_jeux)/ $uneligne->prix_jeux*100;
 								$_SESSION['solde']=$solde;
 						$nom1 = $uneligne->nom_jeux;
-						$prix = $uneligne->prix_jeux;
+						$prix = $uneligne->prix_vente_jeux;
+						$platforme = $uneligne->platforme_jeux;
 								echo'<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
 							<div class="block2">
@@ -136,17 +137,19 @@ else
 	$_tabpanier = 
 	['nom_article_panier'=>$nom1,
 	'prix_article_panier'=>$prix,
+	'platforme_jeux_panier'=>$platforme,
 	'image_article_panier'=>$image1
 	];
 
 	var_dump($_tabpanier);
 		foreach ($lire2 as $uneligne2) {
 			$s = $uneligne2->nom_article_panier;
+			$l = $uneligne2->platforme_jeux_panier;
 			
 
 			# code...
 		}
-		if( $s != $uneligne->nom_jeux)
+		if( $s != $uneligne->nom_jeux && $l != $uneligne->platforme_jeux)
 				{ 
 					$addpanier = create($connexion,'panier_utilisateurs',$_tabpanier); 
 		} else 
